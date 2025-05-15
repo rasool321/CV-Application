@@ -1,0 +1,75 @@
+.section-form {
+  max-width: 480px;
+  margin: 20px auto;
+  padding: 25px 20px;
+  background: #333;
+  border-radius: 12px;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-form h2 {
+  text-align: center;
+  color: #4a90e2;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.section-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #bbb;
+}
+
+.section-form input,
+.section-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1.5px solid #555;
+  border-radius: 8px;
+  background: #222;
+  color: #eee;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.section-form input:focus,
+.section-form textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  background: #2a2a2a;
+}
+
+.section-form button {
+  width: 100%;
+  padding: 14px 0;
+  background: #4a90e2;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.section-form button:hover {
+  background: #357ABD;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .section-form {
+    padding: 20px 15px;
+  }
+
+  .section-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+}

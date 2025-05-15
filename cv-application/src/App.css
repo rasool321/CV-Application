@@ -1,0 +1,246 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fefefe;
+  color: #222;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 70px;
+  background-color: #4a90e2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  font-weight: 700;
+  font-size: 1.7rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+  z-index: 10;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* Section Form Styles */
+.section-form {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  color: azure;
+  font-family: inherit;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+/* Section Form Inner Styles */
+.section-form > * {
+  background: #4f4c4c;
+  padding: 40px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-form:hover > * {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.4);
+}
+
+.section-form h2 {
+  margin-bottom: 28px;
+  color: #4a90e2;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1.2px;
+  text-align: center;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.section-form label {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #ddd;
+  font-size: 1.15rem;
+}
+
+.section-form input,
+.section-form textarea {
+  width: 100%;
+  padding: 15px 18px;
+  margin-top: 10px;
+  border: 2.5px solid #888;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-family: inherit;
+  background-color: #fafafa;
+  color: #222;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.section-form input:focus,
+.section-form textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.7);
+  background-color: white;
+}
+
+.section-form textarea {
+  resize: vertical;
+  min-height: 130px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Button Styling */
+.section-form button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+  margin-top: 28px;
+  user-select: none;
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.5);
+}
+
+.section-form button:hover {
+  background-color: #3a78d1;
+  box-shadow: 0 10px 25px rgba(58, 120, 209, 0.7);
+}
+
+.section-form button:focus {
+  outline: 3px solid #4a90e2;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .section-form > * {
+    padding: 30px 25px;
+  }
+
+  .section-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 22px;
+  }
+
+  .section-form label {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .section-form input,
+  .section-form textarea {
+    padding: 14px 16px;
+    font-size: 1.1rem;
+  }
+
+  .section-form textarea {
+    min-height: 110px;
+  }
+
+  .section-form button {
+    padding: 14px 26px;
+    font-size: 1.1rem;
+    margin-top: 22px;
+  }
+}
+
+.app-container {
+  display: flex;
+  gap: 0;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Here is the magic: 30% and 70% */
+.form-container,
+.preview-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.form-container {
+  background-color: #4f4c4c;
+  color: azure;
+  padding: 20px 10px;
+  border-right: 4px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 30%; /* 30% width */
+}
+
+.form-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.4);
+}
+
+.preview-container {
+  background: linear-gradient(135deg, #f9f9f9 0%, #e6f0ff 100%);
+  padding: 50px 45px;
+  box-shadow: 0 10px 35px rgba(74, 144, 226, 0.4);
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 70%; /* 70% width */
+}
+
+.preview-container:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(74, 144, 226, 0.6);
+}
+
+/* Scrollbar styles */
+.form-container::-webkit-scrollbar,
+.preview-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.form-container::-webkit-scrollbar-thumb,
+.preview-container::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+  border-radius: 12px;
+}
+
+.form-container::-webkit-scrollbar-track,
+.preview-container::-webkit-scrollbar-track {
+  background: #e6f0ff;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1080px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .form-container,
+  .preview-container {
+    height: auto;
+    padding: 30px 25px;
+    border-right: none;
+    border-bottom: 4px solid #ccc;
+    box-shadow: none;
+    flex: none; /* Reset flex for stacking */
+  }
+}
